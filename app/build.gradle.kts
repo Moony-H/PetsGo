@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.petsgo"
+    namespace = "com.moony.petsgo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.petsgo"
+        applicationId = "com.moony.petsgo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -66,4 +66,6 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    implementation(project(":feature:test_home"))
 }

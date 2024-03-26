@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
+/core/common/src/main/res/values/privateKeys.xml

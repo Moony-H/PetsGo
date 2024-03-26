@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.common"
+    namespace = "com.moony.common"
     compileSdk = 34
 
     defaultConfig {

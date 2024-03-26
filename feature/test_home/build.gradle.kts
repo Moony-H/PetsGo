@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.moony.feed"
+    namespace = "com.moony.test_home"
     compileSdk = 34
 
     defaultConfig {
