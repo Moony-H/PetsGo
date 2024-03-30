@@ -9,11 +9,11 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 
 object KakaLoginManager {
-    suspend fun login(activity: Activity): String? {
+    suspend fun login(activity: Activity,mask:Int): String? {
         return suspendCancellableCoroutine { continuation ->
             if (UserApiClient.instance.isKakaoTalkLoginAvailable(activity)) {
 
-                UserApiClient.instance.loginWithKakaoTalk(activity) { token, error ->
+                UserApiClient.instance.loginWithKakaoTalk(context=activity, serviceTerms = TermServices.getServiceKeyList(mask)) { token, error ->
                     //에러가 있음
                     if (error != null) {
                         //카카오톡은 설치가 되어 있으나, 동의를 받는 와중에 사용자가 로그인을 취소한 경우.
@@ -87,4 +87,8 @@ object KakaLoginManager {
             }
         }
     }
+
+    const val PROFILE=0b1
+    const val NICKNAME=0b10
+
 }
