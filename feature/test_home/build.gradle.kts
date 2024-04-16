@@ -4,6 +4,10 @@ plugins {
 }
 
 android {
+
+    viewBinding{
+        enable=true
+    }
     namespace = "com.moony.test_home"
     compileSdk = 34
 
